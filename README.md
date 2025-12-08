@@ -60,15 +60,15 @@ cd Autonomous-AI-Agent-Workflow
 
 ## About This Repository
 
-This repository serves as the official home for the Autonomous AI Agent Workflow bootstrap archive. Created in response to requests from AROS developers who found this workflow highly effective, it provides a complete system for autonomous development.
+This repository serves as the official home for the Autonomous AI Agent Workflow bootstrap archive, providing a complete system for autonomous development.
 
 ### Key Features
 
 - **Zero-code autonomous development** for AROS and compatible projects
 - **GitHub Copilot integration** for AI-driven development
 - **Structured workflows** with 5 phases from discovery to completion
-- **Multi-agent collaboration** using ACD v1.1.0 standard
-- **ACD (Autonomous Continuous Development) Standard** - A custom specification for tracking code evolution and enabling AI agents to understand development history
+- **Multi-agent collaboration** using the ACD v1.1.0 standard
+- **ACD (Autonomous Continuous Development) Standard Specification v1.1.0** - A comprehensive standard for embedding cognitive intelligence and complete historical context into source code, enabling full-cycle continuous development by autonomous agents
 
 ## Target Projects
 

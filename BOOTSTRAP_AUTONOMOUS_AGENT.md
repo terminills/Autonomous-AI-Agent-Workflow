@@ -12,9 +12,9 @@
 This guide helps you bootstrap the **AGENTIC_AI_WORKFLOW** in a fresh fork of the AROS repository using **GitHub Copilot** (or any GitHub-based AI agent) without requiring a local LLM setup.
 
 **About This Workflow:**
-This autonomous development system was created in response to requests from AROS developers who found it highly effective. It includes:
+This autonomous development system includes:
 - The **AGENTIC_AI_WORKFLOW** - A structured 5-phase development process
-- The **ACD Standard** (Autonomous Continuous Development) - A custom specification for tracking code evolution
+- The **ACD Standard Specification v1.1.0** (Autonomous Continuous Development) - A comprehensive standard for tracking code evolution and enabling autonomous agents to understand complete development history
 - Zero-code autonomous development tools and templates
 
 **Perfect for:**
