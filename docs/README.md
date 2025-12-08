@@ -1,9 +1,9 @@
-# AROS Documentation Directory
+# Documentation Directory
 
 ## AI_PHASE: DOCUMENTATION_ORGANIZATION
 ## AI_STATUS: COMPLETE
 ## AI_WORKFLOW: AGENTIC_AI_WORKFLOW
-## AI_NOTE: Per-project documentation structure for autonomous agents
+## AI_NOTE: Generic per-project documentation structure for autonomous agents
 
 ---
 
@@ -11,167 +11,95 @@
 
 This directory contains all project documentation following the **AGENTIC_AI_WORKFLOW** standard. Documentation is organized **per-project** to prevent cluttered phase directories and provide clear organization for autonomous agents.
 
+This is a **template repository** - when you use this bootstrap in your project, you'll create your own project-specific documentation following this structure.
+
 ## Directory Structure
 
 ```
 docs/
 ├── README.md                              # This file
 ├── AGENTIC_AI_WORKFLOW.md                # Master workflow guide
+├── GITHUB_SEARCH_API_ANALYSIS.md         # GitHub API reference
+├── OLLAMA_STREAMING.md                   # Ollama streaming guide
 │
-├── <project-name>/                       # Per-project structure
-│   ├── specs/                            # Project specifications
-│   ├── docs/                             # Project documentation
-│   └── phases/                           # Active agent sessions
-│       ├── phase1/                       # Discovery
-│       ├── phase2/                       # Master Plan
-│       ├── phase3/                       # Task Segmentation
-│       ├── phase4/                       # Implementation
-│       │   └── build_logs/              # Build logs
-│       └── phase5/                       # Completion
+├── acd-system/                           # ACD standard (included in template)
+│   └── docs/
+│       └── ACD_SPECIFICATION_V1.md       # ACD v1.1.0 specification
 │
-└── archive/                              # Archived documentation
+└── <your-project-name>/                  # Create your project directories
+    ├── specs/                            # Project specifications
+    ├── docs/                             # Implementation documentation
+    └── phases/                           # Active agent sessions
+        ├── phase1/                       # Discovery
+        ├── phase2/                       # Master Plan
+        ├── phase3/                       # Task Segmentation
+        ├── phase4/                       # Implementation
+        │   └── build_logs/              # Build logs
+        └── phase5/                       # Completion
 ```
 
-## Projects
+## Included Documentation
 
-### 1. **acd-system/** - Autonomous Continuous Development
-The ACD (Autonomous Continuous Development) system and standard.
+### Core Workflow
+- **AGENTIC_AI_WORKFLOW.md** - Complete 5-phase workflow guide for autonomous development
+- **GITHUB_SEARCH_API_ANALYSIS.md** - GitHub API patterns and best practices
+- **OLLAMA_STREAMING.md** - Guide for Ollama LLM streaming integration
 
-**Contents:**
-- ACD specification and standards
-- Implementation guides
-- Infrastructure documentation
-- LLM integration patterns
+### Standards
+- **acd-system/docs/ACD_SPECIFICATION_V1.md** - Autonomous Continuous Development (ACD) v1.1.0 standard specification
 
-**Files:** 10 documents
+## Creating Your Project Documentation
 
----
+### Step 1: Create Project Directory
 
-### 2. **autonomous-agent-system/** - Autonomous AI Agents
-The autonomous coding agent system for AI-driven development.
+When you start using this template in your repository, create your project directory:
 
-**Contents:**
-- Autonomous agent architecture
-- Dual-agent system
-- AI development workflows
-- Breadcrumb and reasoning guides
-- Fix cycle examples
-
-**Files:** 27 documents
-
----
-
-### 3. **aros-core/** - AROS Core System
-Core AROS operating system development and specifications.
-
-**Contents:**
-- AmigaOS 3.1 compatibility analysis
-- Printer stack implementation
-- MUI 5.0 upgrade guide
-- Gameport/joystick enhancements
-- General implementation summaries
-
-**Files:** 7 documents
-
----
-
-### 4. **build-system/** - Build Infrastructure
-AROS build system, toolchains, and compilation infrastructure.
-
-**Contents:**
-- LLVM toolchain workflows
-- GCC 15 implementation
-- Build artifact generation
-- Build configuration guides
-
-**Files:** 11 documents
-
----
-
-### 5. **electron-v8/** - Electron & V8 Engine
-Electron integration and V8 JavaScript engine porting.
-
-**Contents:**
-- V8 porting guides
-- Electron roadmap
-- Integration specifications
-
-**Files:** 3 documents
-
----
-
-### 6. **integrations/** - Third-Party Integrations
-External tool and system integrations.
-
-**Contents:**
-- Context7 integration
-- Kilocode integration
-- EmuMiga integration
-- Integration evaluation reports
-
-**Files:** 11 documents
-
----
-
-### 7. **llm-infrastructure/** - LLM Systems
-Large Language Model infrastructure and configuration.
-
-**Contents:**
-- Ollama system guides
-- Qwen model setup
-- LLM downloader
-- Auto-install guides
-
-**Files:** 5 documents
-
----
-
-### 8. **radeonsi-driver/** - RadeonSI Graphics Driver
-AMD RadeonSI graphics driver for AROS.
-
-**Contents:**
-- RadeonSI build instructions
-- LLVM build guide
-- Driver implementation status
-- Quick start guide
-
-**Files:** 4 documents
-
----
-
-## Per-Project Structure
-
-Each project follows this structure:
-
-```
-<project-name>/
-├── specs/                    # Specifications and design docs
-│   ├── ARCHITECTURE.md       # Architecture design
-│   ├── API_SPEC.md          # API specifications
-│   └── REQUIREMENTS.md       # Requirements
-│
-├── docs/                     # Implementation documentation
-│   ├── IMPLEMENTATION_*.md   # Implementation guides
-│   ├── GUIDE_*.md           # User/developer guides
-│   └── SUMMARY_*.md         # Status summaries
-│
-└── phases/                   # Active agent sessions
-    ├── phase1/              # Discovery & Analysis
-    │   └── discovery_YYYYMMDD.md
-    ├── phase2/              # Master Plan
-    │   └── plan_YYYYMMDD.md
-    ├── phase3/              # Task Segmentation
-    │   └── tasks_YYYYMMDD.md
-    ├── phase4/              # Implementation Loop
-    │   ├── iteration_XXX.md
-    │   └── build_logs/
-    │       ├── build_YYYYMMDD_HHmmss.log
-    │       └── error_analysis_XXX.md
-    └── phase5/              # Completion
-        └── completion_YYYYMMDD.md
+```bash
+cd docs/
+mkdir -p <your-project-name>/{specs,docs,phases}
 ```
 
-## Benefits of Per-Project Structure
+### Step 2: Set Up Phase Structure
+
+Use the helper script to create the phase directory structure:
+
+```bash
+cd docs/<your-project-name>
+../../scripts/create_phase_structure.sh
+```
+
+This creates:
+```
+phases/
+├── phase1/
+├── phase2/
+├── phase3/
+├── phase4/
+│   └── build_logs/
+└── phase5/
+```
+
+### Step 3: Add Your Specifications
+
+Create specification documents in the `specs/` directory:
+
+```bash
+# Example specifications
+specs/
+├── ARCHITECTURE.md       # Architecture design
+├── API_SPEC.md          # API specifications
+└── REQUIREMENTS.md       # Requirements
+```
+
+### Step 4: Document As You Build
+
+As autonomous agents work on your project, documentation will be created in:
+
+- **specs/** - Design specifications and requirements
+- **docs/** - Implementation guides, summaries, and references
+- **phases/** - Active work from autonomous agent sessions
+
+## Per-Project Structure Benefits
 
 ✅ **No Cluttered Phase Directories**
 - Each project maintains its own phase directories
@@ -239,7 +167,7 @@ All AI-generated documents must include:
 ## AI_NOTE: [Brief description]
 ```
 
-Note the new **AI_PROJECT** field to identify which project the document belongs to.
+Note the **AI_PROJECT** field to identify which project the document belongs to.
 
 ## File Naming Conventions
 
@@ -249,9 +177,7 @@ Note the new **AI_PROJECT** field to identify which project the document belongs
   - `AI_*` - AI/agent-related guides
   - `AUTONOMOUS_*` - Autonomous agent docs
   - `BUILD_*` - Build guides
-  - `LLVM_*` - LLVM toolchain docs
-  - `OLLAMA_*` - Ollama system docs
-  - Project names (e.g., `V8_*`, `ELECTRON_*`)
+  - Project-specific prefixes as appropriate
 - Include dates for session-specific docs: `discovery_YYYYMMDD.md`
 - Use underscores for word separation
 
@@ -259,56 +185,36 @@ Note the new **AI_PROJECT** field to identify which project the document belongs
 
 ### When to Archive
 - Completed agent sessions (move phase* dirs to archive/session_YYYYMMDD/)
-- Superseded documentation (move to archive/old-root/)
+- Superseded documentation (move to archive/old-versions/)
 - Historical reference material
 
 ### Archive Structure
 ```
 archive/
-├── old-root/                 # Previously root-level docs
-│   └── [old documentation files]
-├── session_20231207/         # Completed agent session
+├── old-versions/             # Previously superseded docs
+├── session_YYYYMMDD/         # Completed agent session
 │   ├── phase1/
 │   ├── phase2/
 │   ├── phase3/
 │   ├── phase4/
 │   └── phase5/
-└── [other archived sessions]
+└── examples/                 # Example implementations
 ```
 
-## Helper Scripts
+## Example Projects
 
-Located in `../scripts/`:
-
-- **capture_build.sh** - Capture build output with metadata
-- **analyze_build_log.sh** - Analyze build failures
-- **validate_metadata.sh** - Validate document metadata
-- **create_phase_structure.sh** - Set up new agent session
-
-## Migration Notes
-
-All documentation has been migrated from the root directory to this structured location as of December 2025. This follows the AGENTIC_AI_WORKFLOW principle:
-
-> **Rule:** Never place AI documents in the root directory or in source code folders.
-
-**Exception:** Core project files remain in root:
-- README.md
-- BUILDING.md
-- CONTRIBUTING.md
-- LICENSE files
-
-**Note:** SKIAMUI documentation will be migrated separately.
+Looking for examples? Check the `archive/examples/` directory in the main repository, which contains real-world examples of how this system has been used (note: these may be project-specific and require adaptation).
 
 ## Related Documentation
 
 - Main workflow guide: `AGENTIC_AI_WORKFLOW.md`
-- Autonomous agent guide: `autonomous-agents/AUTONOMOUS_CODING_AGENT.md`
-- ACD specification: `acd/ACD_SPECIFICATION_V1.md`
-- Dual agent system: `autonomous-agents/DUAL_AGENT_SYSTEM.md`
+- Bootstrap guide: `../BOOTSTRAP_AUTONOMOUS_AGENT.md`
+- Documentation entry point: `../DOCUMENTATION_GUIDE.md`
+- ACD specification: `acd-system/docs/ACD_SPECIFICATION_V1.md`
 
 ---
 
 **For questions or clarifications, refer to:**
 - AGENTIC_AI_WORKFLOW.md - Complete workflow guide
-- GitHub issue templates in `.github/ISSUE_TEMPLATE/`
+- GitHub issue templates in `../.github/ISSUE_TEMPLATE/`
 - Helper scripts in `../scripts/`
