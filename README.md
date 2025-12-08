@@ -1,10 +1,26 @@
-# Autonomous Agent Bootstrap for AROS
+# Autonomous AI Agent Workflow
 
-This archive contains everything needed to bootstrap the AGENTIC_AI_WORKFLOW in a fresh AROS fork.
+**Repository Home:** https://github.com/terminills/Autonomous-AI-Agent-Workflow
+
+This repository contains the bootstrap archive for implementing the AGENTIC_AI_WORKFLOW in any AROS fork or compatible project. It provides a complete zero-code autonomous workflow system for AROS development.
 
 ## Quick Start
 
-1. Extract this archive in your AROS repository root
+### Download the Bootstrap Archive
+
+Download the latest release from:
+https://github.com/terminills/Autonomous-AI-Agent-Workflow/releases/latest
+
+Or build from source:
+```bash
+git clone https://github.com/terminills/Autonomous-AI-Agent-Workflow.git
+cd Autonomous-AI-Agent-Workflow
+# Extract files and create archive as needed
+```
+
+### Install in Your AROS Repository
+
+1. Extract the archive in your AROS repository root
 2. Read `BOOTSTRAP_AUTONOMOUS_AGENT.md` for complete instructions
 3. Run the installation:
    ```bash
@@ -19,6 +35,7 @@ This archive contains everything needed to bootstrap the AGENTIC_AI_WORKFLOW in 
 - `.github/ISSUE_TEMPLATE/` - Issue templates for agent tasks
 - `DOCUMENTATION_GUIDE.md` - Entry point for AI models
 - `BOOTSTRAP_AUTONOMOUS_AGENT.md` - Complete bootstrap guide
+- `ACD_SCHEMA_v1.1.0.json` - JSON schema for ACD metadata validation
 
 ## What This Enables
 
@@ -42,6 +59,33 @@ This archive contains everything needed to bootstrap the AGENTIC_AI_WORKFLOW in 
 - Date: 2025-12-08
 - Compatible with: GitHub Copilot, GitHub Issues, ACD v1.1.0
 
+## About This Repository
+
+This repository serves as the official home for the Autonomous AI Agent Workflow bootstrap archive, providing a complete system for autonomous development.
+
+### Key Features
+
+- **Zero-code autonomous development** for AROS and compatible projects
+- **GitHub Copilot integration** for AI-driven development
+- **Structured workflows** with 5 phases from discovery to completion
+- **Multi-agent collaboration** using the ACD v1.1.0 standard
+- **ACD (Autonomous Continuous Development) Standard Specification v1.1.0** - A comprehensive standard for embedding cognitive intelligence and complete historical context into source code, enabling full-cycle continuous development by autonomous agents
+
+## Target Projects
+
+While designed for AROS (Amiga Research Operating System) development, this workflow can be adapted for any project requiring autonomous AI-driven development with:
+- Complex porting tasks
+- API modernization
+- Build system integration
+- Documentation automation
+
+## Contributing
+
+To contribute or report issues:
+1. Fork this repository
+2. Make your changes
+3. Submit a pull request
+
 ## License
 
-See LICENSE files in the AROS repository.
+See LICENSE files in the AROS repository and this repository.

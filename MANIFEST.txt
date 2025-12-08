@@ -1,0 +1,36 @@
+Autonomous Agent Bootstrap Archive
+===================================
+Repository: https://github.com/terminills/Autonomous-AI-Agent-Workflow
+Created: Sun Dec  8 17:20:00 UTC 2025
+Version: 1.0
+
+Contents:
+---------
+Documentation:
+  docs/AGENTIC_AI_WORKFLOW.md
+  docs/README.md
+  docs/acd-system/ (examples)
+  docs/autonomous-agent-system/ (examples)
+
+Scripts:
+  scripts/capture_build.sh
+  scripts/analyze_build_log.sh
+  scripts/validate_metadata.sh
+  scripts/create_phase_structure.sh
+
+Issue Templates:
+  .github/ISSUE_TEMPLATE/agent_task.md
+  .github/ISSUE_TEMPLATE/build_log.md
+  .github/ISSUE_TEMPLATE/progress_update.md
+
+Root Documentation:
+  DOCUMENTATION_GUIDE.md
+  BOOTSTRAP_AUTONOMOUS_AGENT.md
+  README.md
+  install_bootstrap.sh
+
+ACD Schema:
+  ACD_SCHEMA_v1.1.0.json
+
+Total Files: 54
+Total Size: 1.3M
