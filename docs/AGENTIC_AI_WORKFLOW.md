@@ -962,18 +962,19 @@ Generate final completion report:
 
 ### **5.5 Archive Session**
 
-Move all phase documents to archive:
+When a session is complete, you can archive it for future reference:
 
 ```bash
 # From your project directory: docs/<project-name>/
-mkdir -p ../archive/sessions/session_$(date +%Y%m%d)
-mv phases/* ../archive/sessions/session_$(date +%Y%m%d)/
+# Create a dated backup directory
+mkdir -p ../archived-sessions/session_$(date +%Y%m%d)
+mv phases/* ../archived-sessions/session_$(date +%Y%m%d)/
 
 # Recreate phase structure for next session
 ../../scripts/create_phase_structure.sh
 ```
 
-For detailed archiving procedures, see [docs/archive/sessions/README.md](../archive/sessions/README.md)
+Or simply start a new session, keeping old phase documents as historical reference.
 
 ---
 

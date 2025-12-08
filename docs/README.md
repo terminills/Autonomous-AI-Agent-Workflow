@@ -181,32 +181,19 @@ Note the **AI_PROJECT** field to identify which project the document belongs to.
 - Include dates for session-specific docs: `discovery_YYYYMMDD.md`
 - Use underscores for word separation
 
-## Archive Policy
+## Session Management
 
 ### When to Archive
-- Completed agent sessions (move phase* dirs to archive/sessions/session_YYYYMMDD/)
-- Superseded documentation (move to archive/old-versions/)
-- Historical reference material
+When a project completes all 5 phases, you can archive the session by:
+- Moving phase directories to a dated backup location
+- Creating a completion summary
+- Starting fresh for the next session
 
-See [archive/README.md](archive/README.md) for complete archiving procedures.
-
-### Archive Structure
-```
-archive/
-├── examples/                 # Example implementations
-├── old-versions/             # Previously superseded docs
-└── sessions/                 # Completed agent sessions
-    └── session_YYYYMMDD/
-        ├── phase1/
-        ├── phase2/
-        ├── phase3/
-        ├── phase4/
-        └── phase5/
-```
+This keeps your active workspace clean while preserving historical work.
 
 ## Example Projects
 
-Looking for examples? Check the `archive/examples/` directory in the main repository, which contains real-world examples of how this system has been used (note: these may be project-specific and require adaptation).
+As projects using this workflow are completed, successful examples may be added to the repository for reference. Check the main repository for any contributed examples of how this system has been used.
 
 ## Related Documentation
 

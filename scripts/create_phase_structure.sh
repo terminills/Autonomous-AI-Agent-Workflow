@@ -21,7 +21,6 @@ mkdir -p docs/phase2
 mkdir -p docs/phase3
 mkdir -p docs/phase4/build_logs
 mkdir -p docs/phase5
-mkdir -p docs/archive
 
 # Create Phase 1 template
 cat > docs/phase1/discovery_${TIMESTAMP}.md << EOF
