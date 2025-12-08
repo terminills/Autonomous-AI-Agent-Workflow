@@ -218,8 +218,10 @@ docs/
 │       │       └── error_analysis_001.md
 │       └── phase5/                      # Completion
 │           └── completion_YYYYMMDD.md
-└── archive/                             # Archived projects
-    └── <project-name>/
+└── archive/                             # Archived content
+    ├── examples/                        # Example implementations
+    ├── old-versions/                    # Superseded documentation
+    └── sessions/                        # Completed agent sessions
         └── session_YYYYMMDD/
 ```
 
@@ -963,10 +965,15 @@ Generate final completion report:
 Move all phase documents to archive:
 
 ```bash
-mkdir -p docs/archive/session_$(date +%Y%m%d)
-mv docs/phase1 docs/phase2 docs/phase3 docs/phase4 docs/phase5 \
-   docs/archive/session_$(date +%Y%m%d)/
+# From your project directory: docs/<project-name>/
+mkdir -p ../archive/sessions/session_$(date +%Y%m%d)
+mv phases/* ../archive/sessions/session_$(date +%Y%m%d)/
+
+# Recreate phase structure for next session
+../../scripts/create_phase_structure.sh
 ```
+
+For detailed archiving procedures, see [docs/archive/sessions/README.md](../archive/sessions/README.md)
 
 ---
 

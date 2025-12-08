@@ -184,21 +184,24 @@ Note the **AI_PROJECT** field to identify which project the document belongs to.
 ## Archive Policy
 
 ### When to Archive
-- Completed agent sessions (move phase* dirs to archive/session_YYYYMMDD/)
+- Completed agent sessions (move phase* dirs to archive/sessions/session_YYYYMMDD/)
 - Superseded documentation (move to archive/old-versions/)
 - Historical reference material
+
+See [archive/README.md](archive/README.md) for complete archiving procedures.
 
 ### Archive Structure
 ```
 archive/
+├── examples/                 # Example implementations
 ├── old-versions/             # Previously superseded docs
-├── session_YYYYMMDD/         # Completed agent session
-│   ├── phase1/
-│   ├── phase2/
-│   ├── phase3/
-│   ├── phase4/
-│   └── phase5/
-└── examples/                 # Example implementations
+└── sessions/                 # Completed agent sessions
+    └── session_YYYYMMDD/
+        ├── phase1/
+        ├── phase2/
+        ├── phase3/
+        ├── phase4/
+        └── phase5/
 ```
 
 ## Example Projects
