@@ -1,8 +1,8 @@
 Autonomous Agent Bootstrap Archive
 ===================================
 Repository: https://github.com/terminills/Autonomous-AI-Agent-Workflow
-Created: Sun Dec  8 17:49:00 UTC 2025
-Version: 1.1
+Created: Sun Dec  8 18:15:00 UTC 2025
+Version: 1.2
 
 Contents:
 ---------
@@ -34,12 +34,13 @@ ACD Schema:
   ACD_SCHEMA_v1.1.0.json
 
 Total Files: 17
-Total Size: 72K
+Total Size: 71K
 
-Changes in v1.1:
+Changes in v1.2:
 ----------------
-- Removed autonomous-agent-system examples (moved to archive/examples/)
-- Updated docs/README.md to be template-focused
-- Kept ACD specification (generic standard)
-- Kept AGENTIC_AI_WORKFLOW (AROS-focused workflow, appropriate for AROS forks)
-- Archive reduced from 235K to 72K
+- Rebuilt bootstrap archive with clean structure
+- No archive folder in repository (intentionally removed)
+- Focus on core workflow and templates
+- ACD specification included (generic standard)
+- AGENTIC_AI_WORKFLOW included (workflow guide)
+- All essential scripts and templates included
