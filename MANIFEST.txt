@@ -29,5 +29,8 @@ Root Documentation:
   README.md
   install_bootstrap.sh
 
-Total Files: 53
-Total Size: 1.2M
+ACD Schema:
+  ACD_SCHEMA_v1.1.0.json
+
+Total Files: 54
+Total Size: 1.3M

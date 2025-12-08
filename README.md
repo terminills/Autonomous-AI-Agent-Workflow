@@ -35,6 +35,7 @@ cd Autonomous-AI-Agent-Workflow
 - `.github/ISSUE_TEMPLATE/` - Issue templates for agent tasks
 - `DOCUMENTATION_GUIDE.md` - Entry point for AI models
 - `BOOTSTRAP_AUTONOMOUS_AGENT.md` - Complete bootstrap guide
+- `ACD_SCHEMA_v1.1.0.json` - JSON schema for ACD metadata validation
 
 ## What This Enables
 
