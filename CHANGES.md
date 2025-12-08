@@ -2,10 +2,10 @@
 
 ## Date: 2025-12-08
 
-## Version: 1.1
+## Version: 1.2
 
 ## Summary
-Archived AROS-specific implementation examples and restructured documentation to create a cleaner bootstrap template for AROS forks.
+Completed archive folder rebuild with proper structure and documentation, establishing a clean bootstrap condition for the repository.
 
 ---
 
@@ -230,6 +230,49 @@ What was kept:
    - Rebuilt bootstrap archive
    - Updated MANIFEST.txt to v1.1
    - Generated new CHECKSUMS.txt
+
+---
+
+## Version 1.2 Changes (2025-12-08)
+
+### Archive Folder Rebuild
+
+**Issue:** Archive folder was removed as it contained confusing files for new users. Needed to rebuild with proper structure and documentation.
+
+**Changes Made:**
+
+1. **Created Archive Directory Structure:**
+   - Created `docs/archive/` with three subdirectories:
+     - `examples/` - For real-world implementation examples
+     - `old-versions/` - For superseded documentation versions
+     - `sessions/` - For completed autonomous agent workflow sessions
+
+2. **Added Comprehensive Documentation:**
+   - **docs/archive/README.md** - Main archive guide explaining purpose, structure, and usage
+   - **docs/archive/examples/README.md** - Guide for example implementations and contributions
+   - **docs/archive/old-versions/README.md** - Version tracking and documentation lifecycle guide
+   - **docs/archive/sessions/README.md** - Session archiving procedures and best practices
+
+3. **Established Clean Bootstrap State:**
+   - All archive directories start empty
+   - Clear documentation on what gets archived and when
+   - Proper metadata requirements defined
+   - Integration with AGENTIC_AI_WORKFLOW documented
+
+4. **Key Features:**
+   - ✅ Clear purpose for each archive subdirectory
+   - ✅ Comprehensive archiving procedures documented
+   - ✅ Metadata standards established
+   - ✅ Retention and maintenance policies defined
+   - ✅ Ready for community contributions (examples)
+   - ✅ Clean bootstrap condition achieved
+
+**Result:** Repository now has a properly structured archive system that:
+- Won't confuse new users (starts empty)
+- Has clear documentation for when and how to use it
+- Supports the full lifecycle of the AGENTIC_AI_WORKFLOW
+- Provides structure for preserving historical content
+- Enables community sharing of successful implementations
 
 ---
 
