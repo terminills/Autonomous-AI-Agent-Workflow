@@ -1,0 +1,82 @@
+# Aider Configuration for AGENTIC_AI_WORKFLOW
+# https://aider.chat/docs/config.html
+
+# AI Model Configuration
+# RECOMMENDED: Use local models with Ollama (zero cost, full privacy)
+# See docs/LOCAL_MODELS_GUIDE.md for setup instructions
+
+# LOCAL MODEL CONFIGURATION (Recommended)
+# Uncomment the model that matches your hardware:
+
+# Budget/Laptop (8GB VRAM) - Best quality for size
+model: ollama/qwen2.5-coder:7b-instruct
+editor-model: ollama/qwen2.5-coder:7b-instruct
+
+# Mid-Range (16GB VRAM) - Best balance
+# model: ollama/deepseek-coder-v2:16b-lite-instruct-q8_0
+# editor-model: ollama/qwen2.5-coder:7b-instruct
+
+# High-End (24GB+ VRAM) - Best quality
+# model: ollama/qwen2.5-coder:32b-instruct
+# editor-model: ollama/deepseek-coder-v2:16b-lite-instruct-q8_0
+
+# CLOUD API CONFIGURATION (Alternative if you have API keys)
+# model: gpt-4o
+# editor-model: gpt-4o-mini
+
+# Ollama API endpoint (default)
+api-base: http://127.0.0.1:11434
+
+# Git Integration
+auto-commits: true
+dirty-commits: true
+commit-prompt: |
+  Generate a clear, descriptive commit message following AGENTIC_AI_WORKFLOW conventions.
+  Include AI_COMMIT metadata tags when appropriate.
+  Format: AI_COMMIT: [brief description]
+  - [detailed changes]
+  - Ref: [documentation reference if applicable]
+
+# Context and Files
+# Read important workflow documentation at startup
+read:
+  - docs/AGENTIC_AI_WORKFLOW.md
+  - DOCUMENTATION_GUIDE.md
+  - BOOTSTRAP_AUTONOMOUS_AGENT.md
+
+# Map the repository structure for better context
+map-tokens: 2048
+map-refresh: auto
+
+# Code Quality
+lint: true
+test: false  # Don't auto-run tests after every change
+auto-test: false
+
+# Output Configuration
+pretty: true
+show-diffs: true
+show-repo-map: false  # Can be verbose, enable manually if needed
+
+# Chat History
+chat-history-file: .aider.chat.history.md
+
+# Additional Settings
+dark-mode: auto
+voice-language: en
+
+# Edit Format
+# Use architect mode for better multi-file edits
+edit-format: architect
+
+# Environment
+env-file: .aider.env
+
+# Stream responses for better UX
+stream: true
+
+# Message handling
+message-file: .aider.message.md
+
+# Restore chat history on startup
+restore-chat-history: false  # Set to true if you want to continue previous sessions
