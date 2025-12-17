@@ -92,23 +92,23 @@ echo "• Update metadata in documentation"
 echo "========================================="
 echo ""
 
-# Build aider command
-AIDER_CMD="aider"
+# Build aider command as array to avoid command injection
+AIDER_CMD=(aider)
 
 # Add context files
 for file in "${CONTEXT_FILES[@]}"; do
     if [ -f "$file" ]; then
-        AIDER_CMD="$AIDER_CMD --read $file"
+        AIDER_CMD+=(--read "$file")
     fi
 done
 
-# Add message if provided
+# Add message if provided (safely)
 if [ -n "$3" ]; then
     MESSAGE="$3"
     echo "📝 Message: $MESSAGE"
     echo ""
-    AIDER_CMD="$AIDER_CMD --message \"$MESSAGE\""
+    AIDER_CMD+=(--message "$MESSAGE")
 fi
 
-# Execute aider
-eval $AIDER_CMD
+# Execute aider (no eval needed, array expansion is safe)
+"${AIDER_CMD[@]}"

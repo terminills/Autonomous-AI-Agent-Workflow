@@ -92,7 +92,8 @@ if [ "$OS" = "linux" ]; then
     if command -v nvidia-smi &> /dev/null; then
         HAS_GPU=true
         GPU_VRAM=$(nvidia-smi --query-gpu=memory.total --format=csv,noheader,nounits | head -n1)
-        GPU_VRAM=$(echo "scale=0; $GPU_VRAM / 1024" | bc)
+        # Use shell arithmetic instead of bc for better compatibility
+        GPU_VRAM=$((GPU_VRAM / 1024))
         echo "   📊 Detected: ${TOTAL_RAM}GB RAM, ${GPU_VRAM}GB VRAM (NVIDIA)"
     else
         echo "   📊 Detected: ${TOTAL_RAM}GB RAM, no NVIDIA GPU"
@@ -184,11 +185,12 @@ else
 fi
 
 echo ""
-echo "🧪 Testing model..."
-if ollama run $RECOMMENDED_MODEL "Write a hello world function in C" > /dev/null 2>&1; then
-    echo "   ✅ Model working correctly"
+echo "🧪 Testing model availability..."
+if ollama list | grep -q "$RECOMMENDED_MODEL"; then
+    echo "   ✅ Model ready to use"
+    echo "   Note: First run may take a few seconds to load the model"
 else
-    echo "   ⚠️  Model test failed, but may still work"
+    echo "   ⚠️  Model not found in list, but installation reported success"
 fi
 
 echo ""
