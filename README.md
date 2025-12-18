@@ -31,27 +31,43 @@ cd Autonomous-AI-Agent-Workflow
 ## Contents
 
 - `docs/` - Documentation and workflow guides
-- `scripts/` - Helper scripts for build capture and analysis
+  - `AGENTIC_AI_WORKFLOW.md` - Complete 5-phase workflow guide
+  - `AIDER_INTEGRATION.md` - Aider coding assistant integration
+  - `LOCAL_MODELS_GUIDE.md` - Local LLM setup and optimization
+- `scripts/` - Helper scripts for workflow automation
+  - `capture_build.sh` - Build log capture with metadata
+  - `analyze_build_log.sh` - Automated build error analysis
+  - `setup_aider.sh` - Install and configure Aider
+  - `setup_ollama.sh` - Install Ollama with recommended models
+  - `aider_session.sh` - Start Aider with workflow context
 - `.github/ISSUE_TEMPLATE/` - Issue templates for agent tasks
+- `.aider.conf.yml` - Pre-configured Aider settings for local models
 - `DOCUMENTATION_GUIDE.md` - Entry point for AI models
 - `BOOTSTRAP_AUTONOMOUS_AGENT.md` - Complete bootstrap guide
 - `ACD_SCHEMA_v1.1.0.json` - JSON schema for ACD metadata validation
 
 ## What This Enables
 
-- 🤖 GitHub Copilot integration for autonomous development
+- 🤖 **GitHub Copilot** integration for autonomous development
+- 💻 **Aider** support for local terminal-based AI coding
+- 🏠 **Local LLM models** via Ollama (zero cost, full privacy)
 - 📋 Structured 5-phase workflow (Discovery → Plan → Segmentation → Implementation → Completion)
 - 📊 Build log capture and analysis
 - 📚 Per-project documentation structure
 - 🔄 AI_HISTORY tracking for API porting evolution
 - 🤝 ACD v1.1.0 multi-agent collaboration support
+- 🔐 Privacy-first development with local models
 
 ## Next Steps
 
 1. Read `BOOTSTRAP_AUTONOMOUS_AGENT.md`
 2. Review `docs/AGENTIC_AI_WORKFLOW.md`
-3. Create first issue: Bootstrap project discovery
-4. Let GitHub Copilot guide you through the workflow
+3. **NEW:** Setup local coding with Aider:
+   - Read `docs/LOCAL_MODELS_GUIDE.md`
+   - Run `./scripts/setup_ollama.sh`
+   - Run `./scripts/setup_aider.sh`
+4. Create first issue: Bootstrap project discovery
+5. Use GitHub Copilot for planning + Aider for implementation
 
 ## Version
 
